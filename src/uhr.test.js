@@ -3,23 +3,23 @@ const uhr = require('./uhr');
 
 
 describe('uhr',function(){
-  describe('get_current_timezone_offset_in_hours',function(){
+  describe('get_timezone_offset_in_hours',function(){
     const flag = 1;
     const result = flag * new Date().getTimezoneOffset() / 60;
 
     it('return current timezone offset in hour',function(){
-      expect(uhr.get_current_timezone_offset_in_hours(flag)).to.equal(result);
+      expect(uhr.get_timezone_offset_in_hours(flag)).to.equal(result);
     });
 
     it('throws an err missing flag value',function(){
       expect(function(){
-          uhr.get_current_timezone_offset_in_hours()
+          uhr.get_timezone_offset_in_hours()
       }).to.throw('missing flag value');
     });
 
     it('throws an err invalid flag value',function(){
       expect(function(){
-          uhr.get_current_timezone_offset_in_hours(4)
+          uhr.get_timezone_offset_in_hours(4)
       }).to.throw('invalid flag value');
     });
 
