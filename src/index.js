@@ -18,9 +18,9 @@ function UHR(day, hour, minute, flag) {
   }
 
   // console.log(`${day}, ${hour}, ${minute}`);
-  const current_timezone_offset_in_hours = uhr.get_current_timezone_offset_in_hours(flag);
-  const offset_minute = uhr.get_offset_minute(current_timezone_offset_in_hours);
-  const offset_hour = uhr.get_offset_hour(current_timezone_offset_in_hours);
+  const timezone_offset_in_hours = uhr.get_timezone_offset_in_hours(flag);
+  const offset_minute = uhr.get_offset_minute(timezone_offset_in_hours);
+  const offset_hour = uhr.get_offset_hour(timezone_offset_in_hours);
   const new_minute = uhr.get_new_minute(minute, offset_minute);
   const carry_hour = uhr.get_carry_hour(minute, offset_minute);
   const new_hour = uhr.get_new_hour(hour, offset_hour, carry_hour);

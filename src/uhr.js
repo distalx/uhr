@@ -1,4 +1,4 @@
-get_current_timezone_offset_in_hours =  function(flag){
+get_timezone_offset_in_hours =  function(flag){
   if (flag === undefined) {
     throw "missing flag value"
   }
@@ -8,11 +8,11 @@ get_current_timezone_offset_in_hours =  function(flag){
 
   return flag * new Date().getTimezoneOffset() / 60;
 }
-get_offset_minute = function (current_timezone_offset_in_hours) {
-  return ((current_timezone_offset_in_hours * 100) - ( (current_timezone_offset_in_hours | 0) *100)) * 0.60;
+get_offset_minute = function (timezone_offset_in_hours) {
+  return ((timezone_offset_in_hours * 100) - ( (timezone_offset_in_hours | 0) *100)) * 0.60;
 }
-get_offset_hour = function (current_timezone_offset_in_hours) {
-  return current_timezone_offset_in_hours | 0;
+get_offset_hour = function (timezone_offset_in_hours) {
+  return timezone_offset_in_hours | 0;
 }
 
 get_new_minute = function(minute, offset_minute){
@@ -72,7 +72,7 @@ get_new_day = function(day, carry_day) {
 
 
 module.exports = {
-  get_current_timezone_offset_in_hours,
+  get_timezone_offset_in_hours,
   get_offset_minute,
   get_offset_hour,
   get_new_minute,
