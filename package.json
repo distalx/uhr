@@ -1,0 +1,16 @@
+{
+  "name": "uhr",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha src/uhr.test.js",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/uhr.test.js",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "istanbul": "0.4.5",
+    "mocha": "4.0.1"
+  },
+  "author": "dx <distalx@gmail.com>"
+}
