@@ -12,7 +12,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   },
   "devDependencies": {
@@ -24,12 +24,18 @@
     "mocha": "4.0.1",
     "semantic-release": "^8.2.0"
   },
+  "license": "MIT",
   "release": {
     "analyzeCommits": {
+      "preset": "angular",
       "releaseRules": [
-        {"type": "docs", "scope": "README", "release": "patch"},
-        {"type": "refactor", "release": "patch"}
-      ]
+        {"type": "docs", "scope":"README", "release": "patch"},
+        {"type": "refactor", "release": "patch"},
+        {"type": "style", "release": "patch"}
+      ],
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      }
     }
   },
   "repository": {
