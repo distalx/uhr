@@ -24,6 +24,14 @@
     "mocha": "4.0.1",
     "semantic-release": "^8.2.0"
   },
+  "release": {
+    "analyzeCommits": {
+      "releaseRules": [
+        {"type": "docs", "scope": "README", "release": "patch"},
+        {"type": "refactor", "release": "patch"}
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/distalx/uhr.git"
