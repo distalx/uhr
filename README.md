@@ -29,6 +29,7 @@ day = Number    //0 to 6, Mon To Sun
 hour = Number   // 0 to 23
 minute = Number // 0 to 60
 
-UHR(day, hour, minute, flag)
+let result = UHR(day, hour, minute, flag)
+consloe.log(result) // { day:Number, hour:Number, minute:Number }
 
 ```
